@@ -1,4 +1,4 @@
-standard# Developer Kata
+# Developer Kata
 This kata is designed to prove out the ability to design react applications properly. All tools that are needed are provided in this repo, so `npm i` is all that is needed to get going. You may bring in any tools you wish to help facilitate solving the problem. Please use axios and redux-promise-middleware though.
 
 ## Problem Description

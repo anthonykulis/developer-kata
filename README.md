@@ -2,9 +2,9 @@
 This kata is designed to prove out the ability to design react applications properly. All tools that are needed are provided in this repo, so `npm i` is all that is needed to get going. You may bring in any tools you wish to help facilitate solving the problem. Please use axios and redux-promise-middleware though.
 
 ## Problem Description
-You will simply do a GET to `https://868r1t0.restletmocks.net/catfish` and use that data to form different views. There will be no need to perform the other CRUD operations for this since we are more interested in your ability to use the React Redux flow and the React lifecycle properly to build a fairly complex page.
+You will simply do a GET to `https://868r1t0.restletmocks.net/catfish` and use that data to form different views. There will be no need to perform the other CRUD operations for this since we are more interested in your ability to use the React Redux flow and the React lifecycle properly to build a fairly complex page than performing boring CRUD ops.
 
-Before describing the UI requirements, I will a catfish DTO sample on the GET /catfish call.
+Before describing the UI requirements, here is catfish DTO sample on the GET /catfish call to help you understand the components.
 
 
 ```JSON

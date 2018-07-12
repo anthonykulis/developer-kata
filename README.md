@@ -32,7 +32,7 @@ The final component display the top 5 fish records by weight aggregated by speci
 ### Grading
 You will be graded on proper usage of the react redux flow, in particular, demonstrating the proper part of the flow to manipulate data for the purpose of scalability, efficiency, clarity, etc. Keep in mind someone may need to come back and edit the code in the future, so clarity is important. Redux also thinks you should do things at certain stages of the flow. Make sure to pay attention to that.
 
-Your React skills will be tested too. Make sure to properly use the lifecyle and compose your application for scalability.
+Your React skills will be tested too. Make sure to properly use the lifecycle and compose your application for scalability.
 
 ## React Documentation
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

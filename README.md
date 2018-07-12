@@ -34,6 +34,10 @@ You will be graded on proper usage of the react redux flow, in particular, demon
 
 Your React skills will be tested too. Make sure to properly use the lifecycle and compose your application for scalability.
 
+
+## Submission details
+Fork this repository. Create a working branch and make PRs to your local master. Ask me (anthonykulis) to do code reviews. I will make suggestions if needed for each PR. Do not turd launch. If your commits are messy and hard to follow, I will just approve them for merge them w/o comment or review into your master. I should be able to understand what you are doing and why you are doing it via each PR title and description, as well as commit descriptions.
+
 ## React Documentation
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

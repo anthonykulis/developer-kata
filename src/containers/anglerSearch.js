@@ -1,7 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
 import {DebounceInput} from 'react-debounce-input';
-import Column from '../components/column';
 import FishList from '../components/fishList';
 
 class Index extends Component {
@@ -16,7 +15,7 @@ class Index extends Component {
 
   render() {
     return (
-      <Column className='col-md-4'>
+      <div className='col-md-4'>
         {/*LISTS TOP FIVE FISH BY ANGLER*/}
         <h3>Catfish by Angler</h3>
         <DebounceInput
@@ -48,7 +47,7 @@ class Index extends Component {
             <FishList catfish={this.state.currentAngler.slice(0, 5)} />
           </Fragment>
         )}
-      </Column>
+      </div>
     )
   }
 }

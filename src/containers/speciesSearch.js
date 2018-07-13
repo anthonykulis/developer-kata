@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
-import Column from '../components/column';
 import FishList from '../components/fishList';
 
 class Index extends Component {
@@ -14,7 +13,7 @@ class Index extends Component {
 
   render() {
     return (
-      <Column>
+      <div className='col-md-4'>
         {/*LISTS TOP FIVE FISH BY ANGLER*/}
         <h3>Catfish by Species</h3>
         <select
@@ -43,7 +42,7 @@ class Index extends Component {
             />
           </Fragment>
         )}
-      </Column>
+      </div>
     )
   }
 }

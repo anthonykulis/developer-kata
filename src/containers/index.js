@@ -3,8 +3,6 @@ import {connect} from 'react-redux';
 import {fetchAllFish} from '../redux/actions';
 import AnglerSearch from '../containers/anglerSearch';
 import SpeciesSearch from '../containers/speciesSearch';
-import Column from '../components/column';
-import Row from '../components/row';
 import AllFishList from '../components/allFish';
 
 class Index extends Component {
@@ -14,15 +12,15 @@ class Index extends Component {
 
   render() {
     return (
-      <Row>
+      <div className='row'>
         <AllFishList catfish={this.props.catfish.all} />
         <AnglerSearch />
-        <Column className='col-md-4'>
-          <Row>
+        <div className='col-md-4'>
+          <div className='row'>
             <SpeciesSearch />
-          </Row>
-        </Column>
-      </Row>
+          </div>
+        </div>
+      </div>
     )
   }
 }

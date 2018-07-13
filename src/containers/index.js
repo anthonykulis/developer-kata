@@ -1,8 +1,10 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
 import {fetchAllFish} from '../redux/actions';
 import AnglerSearch from '../containers/anglerSearch';
 import SpeciesSearch from '../containers/speciesSearch';
+import SpeciesAverage from '../containers/speciesAverage';
+import SpeciesAggregate from '../containers/speciesAggregate';
 
 class Index extends Component {
   componentWillMount() {
@@ -11,21 +13,13 @@ class Index extends Component {
 
   render() {
     return (
-      <div className='row'>
+      <Fragment>
         <AnglerSearch />
-        <div className='col-md-4'>
-          <div className='row'>
-            <SpeciesSearch />
-          </div>
-        </div>
-      </div>
+        <SpeciesSearch />
+        <SpeciesAggregate />
+        <SpeciesAverage />
+      </Fragment>
     )
-  }
-}
-
-function mapStateToProps(state) {
-  return {
-    catfish: state.catfish
   }
 }
 
@@ -37,4 +31,4 @@ function mapDispatchToProps(dispatch) {
   })
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Index);
+export default connect(null, mapDispatchToProps)(Index);

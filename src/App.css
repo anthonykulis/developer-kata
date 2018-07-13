@@ -1,0 +1,15 @@
+.col-md-4 {
+    width: 33%;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.row {
+    display: table;
+    width: 100%;
+}
+
+.fish-box {
+    border: 1px solid #BEBEBF;
+    margin: 1rem;
+}

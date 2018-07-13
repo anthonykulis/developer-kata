@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
 import {DebounceInput} from 'react-debounce-input';
-import FishList from '../components/fishList';
+import FishCard from '../components/fishCard';
 
 class Index extends Component {
   constructor() {
@@ -44,7 +44,9 @@ class Index extends Component {
         ) : (
           <Fragment>
             <h3>{this.state.anglerSearch}'s Top 5 fish</h3>
-            <FishList catfish={this.state.currentAngler.slice(0, 5)} />
+            {this.state.currentAngler.slice(0, 5).map(fish => {
+              return <FishCard {...fish} key={fish.id} />
+            })}
           </Fragment>
         )}
       </div>

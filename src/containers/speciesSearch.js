@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
-import FishList from '../components/fishList';
+import FishCard from '../components/fishCard';
 
 class Index extends Component {
   constructor() {
@@ -33,13 +33,14 @@ class Index extends Component {
         ) : (
           <Fragment>
             <h3>Longest {this.state.selectedSpecies} Catfish</h3>
-            <FishList
-              catfish={this.props.catfish.all.filter(fish => {
-                return fish.species === this.state.selectedSpecies;
-              }).sort((a, b) => {
-                return b.length - a.length;
-              }).slice(0, 5)}
-            />
+            {this.props.catfish.all.filter(fish => {
+              return fish.species === this.state.selectedSpecies;
+            }).sort((a, b) => {
+              return b.length - a.length;
+            }).slice(0, 5)
+              .map(fish => {
+                return <FishCard {...fish} key={fish.id} />
+              })}
           </Fragment>
         )}
       </div>

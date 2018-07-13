@@ -2,7 +2,6 @@ import constants from '../constants';
 
 const initState = {
   all: [],
-  sortedByLength: [],
   species: [],
 };
 
@@ -20,13 +19,11 @@ export default (state = initState, action) => {
           species.push(fish.species);
         }
       });
-      const sortedByLength = all.sort((a, b) => {
-        return b.length - a.length;
-      });
+
       return {
         ...state,
+        species,
         all,
-        sortedByLength
       };
     default:
       return state;

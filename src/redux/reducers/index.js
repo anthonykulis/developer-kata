@@ -11,8 +11,7 @@ export default (state = initState, action) => {
     case constants.FETCH_ALL_FISH_FULFILLED:
       const all = action.payload.data.map(fish => {
         return {
-          ...fish,
-          weight: Math.round(fish.length * fish.girth * fish.girth / 800)
+          ...fish
         }
       });
       const species = [];

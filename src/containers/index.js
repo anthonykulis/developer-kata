@@ -39,6 +39,11 @@ class Index extends Component {
                 fish.angler.toLowerCase() === event.target.value.toLowerCase()
               ).sort((a, b) => {
                 return b.length - a.length;
+              }).map(fish => {
+                return {
+                  ...fish,
+                  weight: fish.length * fish.girth * fish.girth / 800
+                }
               });
               this.setState({
                 anglerSearch: event.target.value,

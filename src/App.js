@@ -1,6 +1,6 @@
 import React from 'react';
-import Catfish from './catfish';
-import './app.css';
+import Catfish from './containers/index';
+import './App.css';
 
 class App extends React.Component {
   render() {

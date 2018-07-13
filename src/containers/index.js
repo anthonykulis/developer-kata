@@ -2,7 +2,8 @@ import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
 import {DebounceInput} from 'react-debounce-input';
 import {fetchAllFish} from '../redux/actions';
-import FishCard from '../components/fishCard';
+import Column from '../components/column';
+import FishList from '../components/fishList';
 
 class Index extends Component {
   constructor() {
@@ -21,16 +22,12 @@ class Index extends Component {
   render() {
     return (
       <div className='row'>
-        <div className='col-md-4'>
+        <Column className='col-md-4'>
           {/*LISTS ALL FISH*/}
           <h3>All Catfish</h3>
-          {this.props.catfish.all.map(fish => {
-            return (
-              <FishCard {...fish} />
-            )
-          })}
-        </div>
-        <div className='col-md-4'>
+          <FishList catfish={this.props.catfish.all} />
+        </Column>
+        <Column className='col-md-4'>
           {/*LISTS TOP FIVE FISH BY ANGLER*/}
           <h3>Catfish by Angler</h3>
           <DebounceInput
@@ -54,15 +51,12 @@ class Index extends Component {
             ) : (
               <Fragment>
                 <h3>{this.state.anglerSearch}'s Top 5 fish</h3>
-                {this.state.currentAngler.slice(0, 5).map(fish => {
-                  return (
-                    <FishCard {...fish} />
-                  );
-                })}
+                <FishList catfish={this.state.currentAngler.slice(0, 5)} />
               </Fragment>
             )}
-        </div>
-        
+        </Column>
+        <Column className='col-md-4'>
+        </Column>
       </div>
     )
   }

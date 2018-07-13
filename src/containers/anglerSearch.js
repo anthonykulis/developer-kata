@@ -1,7 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
 import {DebounceInput} from 'react-debounce-input';
-import {fetchAllFish} from '../redux/actions';
 import Column from '../components/column';
 import FishList from '../components/fishList';
 
@@ -13,10 +12,6 @@ class Index extends Component {
       anglerSearch: '',
       currentAngler: []
     }
-  }
-
-  componentWillMount() {
-    this.props.fetchAllFish();
   }
 
   render() {
@@ -64,12 +59,4 @@ function mapStateToProps(state) {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return({
-    fetchAllFish: () => {
-      dispatch(fetchAllFish());
-    }
-  })
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Index);
+export default connect(mapStateToProps)(Index);

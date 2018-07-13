@@ -4,4 +4,6 @@ const initState = {
     defineYourOwnInitState: true
 };
 
-export default (state = initState, action) => {}
+export default (state = initState, action) => {
+    return state;
+}

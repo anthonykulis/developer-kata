@@ -37,13 +37,13 @@ class Index extends Component {
             onChange={event => {
               const currentAngler = this.props.catfish.all.filter(fish =>
                 fish.angler.toLowerCase() === event.target.value.toLowerCase()
-              ).sort((a, b) => {
-                return b.length - a.length;
-              }).map(fish => {
+              ).map(fish => {
                 return {
                   ...fish,
                   weight: fish.length * fish.girth * fish.girth / 800
                 }
+              }).sort((a, b) => {
+                return b.weight - a.weight;
               });
               this.setState({
                 anglerSearch: event.target.value,

@@ -21,7 +21,7 @@ With a list of these DTOs you will create a set of UI components that allow the 
 
 
 ### UI components
-The first component will allow the user to select an angler and get their top 5 fish by weight. Weight is not part of the DTO but can be calculated by `length * girth * girth / 100`.
+The first component will allow the user to select an angler and get their top 5 fish by weight. Weight is not part of the DTO but can be calculated by `length * girth * girth / 800`.
 
 The second component will allow the user to select a species and see the top 5 records fish by length.
 
